@@ -1,5 +1,28 @@
+.rowFlex {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.bob {
+  color: rgb(red, green, blue)
+}
+
+.borderOne {
+  background-color: aliceblue;
+  /* border-width: 1em; */
+  border: black;
+}
+.tinyMargin {
+  margin: 1em
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App > div {
+  border: red 20px;
 }
 
 .App-logo {
