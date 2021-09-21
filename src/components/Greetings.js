@@ -1,5 +1,3 @@
-import react from "react";
-
 function Greetings (props) {
     console.log(props)
     let greeting ='';

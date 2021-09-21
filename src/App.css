@@ -9,7 +9,7 @@
 
 .borderOne {
   background-color: aliceblue;
-  /* border-width: 1em; */
+  
   border: black;
 }
 .tinyMargin {
@@ -58,4 +58,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.dicePic {
+  height: 300px
 }

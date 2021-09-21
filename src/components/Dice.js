@@ -1,32 +1,34 @@
-import react from "react";
 import { useState } from 'react';
 
 function Dice () {
-    let randomDice = '../img/dice' + Math.floor(Math.random()*5 + 1) + '.png';
-    const setInitialValue = () => {
-        console.log('set initial value');
-        return 2;
-    }
+    function randomSix(){return Math.floor(Math.random()*5 + 1)}
     
-    const [dice, clickIt] = useState(setInitialValue);
-    
+    const [image, setImage] = useState('/img/dice' + randomSix() + '.png')
+    console.log(image)
     const clickHandler = () => {
-        clickIt(dice => {
-            randomDice = '../img/dice-empty.png';
-            setTimeout(function (){
-
-                randomDice = '../img/dice' + Math.floor(Math.random()*5 + 1) + '.png'
-              
-              }, 5000);
+        setImage(image => {
+          return '/img/dice-empty.png'
         });
-    }
-    
+        setTimeout(() => setImage(image => {
+          return '/img/dice' + randomSix() + '.png'
+        }), 1000)
+      }
+
+      // function randomSix() { return Math.floor(Math.random() * 5 + 1) }
+
+      // const [image, setImage] = useState('/img/dice' + randomSix() + '.png')
+      // console.log(image)
+      // const clickHandler = () => {
+      //   setImage('/img/dice-empty.png');
+      //   setTimeout(() => setImage('/img/dice' + randomSix() + '.png'), 2000);
+      // }
+      
     return (
         <div>
         <img onClick={clickHandler}
-        src={randomDice}
-        className="profile"
-        alt="profile pic"
+        src={image}
+        className="dicePic"
+        alt="dice"
         />
         </div>
         );

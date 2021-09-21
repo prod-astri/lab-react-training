@@ -1,5 +1,3 @@
-import react from "react";
-
 function Random (props) {
     console.log(props)
     const range = parseInt(props.max) - parseInt(props.min) ;

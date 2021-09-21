@@ -1,4 +1,3 @@
-import react from "react";
 import { useState } from 'react';
 
 function LikeButton() {
@@ -7,7 +6,7 @@ function LikeButton() {
       return 0
     }
   
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(() => setInitialValue());
   
     const clickHandler = () => {
       setCount(count => count + 1);

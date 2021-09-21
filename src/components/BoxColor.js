@@ -1,5 +1,3 @@
-import react from "react";
-
 function BoxColor (props) {
     console.log(props)
 

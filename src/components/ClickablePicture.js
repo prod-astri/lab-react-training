@@ -1,4 +1,3 @@
-import react from "react";
 import { useState } from 'react';
 
 
@@ -15,7 +14,7 @@ function ClickablePicture (props) {
     }
     
     return (
-        <div class="rowFlex borderOne">
+        <div className="rowFlex borderOne">
         <img onClick={clickHandler}
         src={clicked ? props.img : props.imgClicked}
         className="profile"
